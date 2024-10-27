@@ -1,0 +1,35 @@
+﻿using CompanyRegistry.Data.Repositories;
+using CompanyRegistry.Models;
+
+namespace CompanyRegistry.Services
+{
+    public class CompanyTypesServices
+    {
+        private readonly CompanyTypesRepository _repository;
+
+        public CompanyTypesServices(CompanyTypesRepository repository)
+        {
+            _repository = repository;
+        }
+
+        public async Task GetAllCompanyTypesAsync()
+        {
+            await _repository.GetAllAsync();
+        }
+
+        public async Task GetCompanyTypeById(int id)
+        {
+            await _repository.GetByIdAsync(id);
+        }
+
+        public async Task AddCompanyTypeAsync (CompanyTypes companyType)
+        {
+            await _repository.AddAsync(companyType);
+        }
+
+        public async Task DeleteCompanyTypeAsync (int id)
+        {
+            await _repository.DeleteAsync(id);
+        }
+    }
+}
