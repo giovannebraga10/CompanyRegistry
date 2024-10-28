@@ -52,7 +52,7 @@ namespace CompanyRegistry.Controllers
         {
             try
             {
-                await _services.AddUserAsync(user);
+                await _services.UpdateUserAsync(user);
                 return Ok();
             }
             catch (Exception ex)

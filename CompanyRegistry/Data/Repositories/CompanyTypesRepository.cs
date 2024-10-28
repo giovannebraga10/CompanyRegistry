@@ -12,9 +12,9 @@ namespace CompanyRegistry.Data.Repositories
             _context = context;
         }
 
-        public async Task GetAllAsync()
+        public async Task<IEnumerable<CompanyTypes>> GetAllAsync()
         {
-            await _context.CompanyTypes.ToListAsync();
+            return await _context.CompanyTypes.ToListAsync();
         }
 
         public async Task<CompanyTypes> GetByIdAsync(int id)

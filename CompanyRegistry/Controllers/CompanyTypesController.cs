@@ -19,9 +19,9 @@ namespace CompanyRegistry.Controllers
 
         // GET: api/<CompanyTypesController>
         [HttpGet]
-        public async Task GetAll()
+        public async Task<IActionResult> GetAll()
         {
-            await _services.GetAllCompanyTypesAsync();
+            return Ok (await _services.GetAllCompanyTypesAsync());
         }
 
         // GET api/<CompanyTypesController>/5

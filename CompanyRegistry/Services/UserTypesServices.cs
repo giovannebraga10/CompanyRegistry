@@ -12,9 +12,9 @@ namespace CompanyRegistry.Services
             _repository = repository;
         }
 
-        public async Task GetAllUserTypes()
+        public async Task<IEnumerable<UserTypes>> GetAllUserTypes()
         {
-            await _repository.GetAllAsync();
+           return await _repository.GetAllAsync();
         }
 
         public async Task<UserTypes> GetUserTypeById(int id)

@@ -3,52 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Giovanne\\OneDrive\\\u00C1rea de Trabalho\\SgRentals\\Project\\CompanyRegistry\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CC6266A7-9747-4C0B-BD20-2B85447BBEF3}|CompanyRegistry\\CompanyRegistry.csproj|c:\\users\\giovanne\\onedrive\\\u00E1rea de trabalho\\sgrentals\\project\\companyregistry\\companyregistry\\controllers\\companytypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC6266A7-9747-4C0B-BD20-2B85447BBEF3}|CompanyRegistry\\CompanyRegistry.csproj|solutionrelative:companyregistry\\controllers\\companytypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC6266A7-9747-4C0B-BD20-2B85447BBEF3}|CompanyRegistry\\CompanyRegistry.csproj|c:\\users\\giovanne\\onedrive\\\u00E1rea de trabalho\\sgrentals\\project\\companyregistry\\companyregistry\\services\\companytypesservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC6266A7-9747-4C0B-BD20-2B85447BBEF3}|CompanyRegistry\\CompanyRegistry.csproj|solutionrelative:companyregistry\\services\\companytypesservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC6266A7-9747-4C0B-BD20-2B85447BBEF3}|CompanyRegistry\\CompanyRegistry.csproj|c:\\users\\giovanne\\onedrive\\\u00E1rea de trabalho\\sgrentals\\project\\companyregistry\\companyregistry\\data\\repositories\\companytypesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC6266A7-9747-4C0B-BD20-2B85447BBEF3}|CompanyRegistry\\CompanyRegistry.csproj|solutionrelative:companyregistry\\data\\repositories\\companytypesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CC6266A7-9747-4C0B-BD20-2B85447BBEF3}|CompanyRegistry\\CompanyRegistry.csproj|c:\\users\\giovanne\\onedrive\\\u00E1rea de trabalho\\sgrentals\\project\\companyregistry\\companyregistry\\controllers\\usertypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CC6266A7-9747-4C0B-BD20-2B85447BBEF3}|CompanyRegistry\\CompanyRegistry.csproj|solutionrelative:companyregistry\\controllers\\usertypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC6266A7-9747-4C0B-BD20-2B85447BBEF3}|CompanyRegistry\\CompanyRegistry.csproj|c:\\users\\giovanne\\onedrive\\\u00E1rea de trabalho\\sgrentals\\project\\companyregistry\\companyregistry\\services\\usertypesservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC6266A7-9747-4C0B-BD20-2B85447BBEF3}|CompanyRegistry\\CompanyRegistry.csproj|solutionrelative:companyregistry\\services\\usertypesservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC6266A7-9747-4C0B-BD20-2B85447BBEF3}|CompanyRegistry\\CompanyRegistry.csproj|c:\\users\\giovanne\\onedrive\\\u00E1rea de trabalho\\sgrentals\\project\\companyregistry\\companyregistry\\data\\repositories\\usertypesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC6266A7-9747-4C0B-BD20-2B85447BBEF3}|CompanyRegistry\\CompanyRegistry.csproj|solutionrelative:companyregistry\\data\\repositories\\usertypesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC6266A7-9747-4C0B-BD20-2B85447BBEF3}|CompanyRegistry\\CompanyRegistry.csproj|c:\\users\\giovanne\\onedrive\\\u00E1rea de trabalho\\sgrentals\\project\\companyregistry\\companyregistry\\controllers\\companiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC6266A7-9747-4C0B-BD20-2B85447BBEF3}|CompanyRegistry\\CompanyRegistry.csproj|solutionrelative:companyregistry\\controllers\\companiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC6266A7-9747-4C0B-BD20-2B85447BBEF3}|CompanyRegistry\\CompanyRegistry.csproj|c:\\users\\giovanne\\onedrive\\\u00E1rea de trabalho\\sgrentals\\project\\companyregistry\\companyregistry\\data\\repositories\\usersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC6266A7-9747-4C0B-BD20-2B85447BBEF3}|CompanyRegistry\\CompanyRegistry.csproj|solutionrelative:companyregistry\\data\\repositories\\usersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC6266A7-9747-4C0B-BD20-2B85447BBEF3}|CompanyRegistry\\CompanyRegistry.csproj|c:\\users\\giovanne\\onedrive\\\u00E1rea de trabalho\\sgrentals\\project\\companyregistry\\companyregistry\\services\\usersservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC6266A7-9747-4C0B-BD20-2B85447BBEF3}|CompanyRegistry\\CompanyRegistry.csproj|solutionrelative:companyregistry\\services\\usersservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC6266A7-9747-4C0B-BD20-2B85447BBEF3}|CompanyRegistry\\CompanyRegistry.csproj|c:\\users\\giovanne\\onedrive\\\u00E1rea de trabalho\\sgrentals\\project\\companyregistry\\companyregistry\\models\\companies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC6266A7-9747-4C0B-BD20-2B85447BBEF3}|CompanyRegistry\\CompanyRegistry.csproj|solutionrelative:companyregistry\\models\\companies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CC6266A7-9747-4C0B-BD20-2B85447BBEF3}|CompanyRegistry\\CompanyRegistry.csproj|c:\\users\\giovanne\\onedrive\\\u00E1rea de trabalho\\sgrentals\\project\\companyregistry\\companyregistry\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CC6266A7-9747-4C0B-BD20-2B85447BBEF3}|CompanyRegistry\\CompanyRegistry.csproj|solutionrelative:companyregistry\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CC6266A7-9747-4C0B-BD20-2B85447BBEF3}|CompanyRegistry\\CompanyRegistry.csproj|c:\\users\\giovanne\\onedrive\\\u00E1rea de trabalho\\sgrentals\\project\\companyregistry\\companyregistry\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC6266A7-9747-4C0B-BD20-2B85447BBEF3}|CompanyRegistry\\CompanyRegistry.csproj|solutionrelative:companyregistry\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CC6266A7-9747-4C0B-BD20-2B85447BBEF3}|CompanyRegistry\\CompanyRegistry.csproj|c:\\users\\giovanne\\onedrive\\\u00E1rea de trabalho\\sgrentals\\project\\companyregistry\\companyregistry\\services\\usersservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC6266A7-9747-4C0B-BD20-2B85447BBEF3}|CompanyRegistry\\CompanyRegistry.csproj|solutionrelative:companyregistry\\services\\usersservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC6266A7-9747-4C0B-BD20-2B85447BBEF3}|CompanyRegistry\\CompanyRegistry.csproj|c:\\users\\giovanne\\onedrive\\\u00E1rea de trabalho\\sgrentals\\project\\companyregistry\\companyregistry\\controllers\\companiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC6266A7-9747-4C0B-BD20-2B85447BBEF3}|CompanyRegistry\\CompanyRegistry.csproj|solutionrelative:companyregistry\\controllers\\companiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC6266A7-9747-4C0B-BD20-2B85447BBEF3}|CompanyRegistry\\CompanyRegistry.csproj|c:\\users\\giovanne\\onedrive\\\u00E1rea de trabalho\\sgrentals\\project\\companyregistry\\companyregistry\\controllers\\companytypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC6266A7-9747-4C0B-BD20-2B85447BBEF3}|CompanyRegistry\\CompanyRegistry.csproj|solutionrelative:companyregistry\\controllers\\companytypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,162 +30,68 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "CompanyTypesRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Giovanne\\OneDrive\\\u00C1rea de Trabalho\\SgRentals\\Project\\CompanyRegistry\\CompanyRegistry\\Data\\Repositories\\CompanyTypesRepository.cs",
-              "RelativeDocumentMoniker": "CompanyRegistry\\Data\\Repositories\\CompanyTypesRepository.cs",
-              "ToolTip": "C:\\Users\\Giovanne\\OneDrive\\\u00C1rea de Trabalho\\SgRentals\\Project\\CompanyRegistry\\CompanyRegistry\\Data\\Repositories\\CompanyTypesRepository.cs",
-              "RelativeToolTip": "CompanyRegistry\\Data\\Repositories\\CompanyTypesRepository.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAwwBUAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T03:01:20.423Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CompanyTypesServices.cs",
-              "DocumentMoniker": "C:\\Users\\Giovanne\\OneDrive\\\u00C1rea de Trabalho\\SgRentals\\Project\\CompanyRegistry\\CompanyRegistry\\Services\\CompanyTypesServices.cs",
-              "RelativeDocumentMoniker": "CompanyRegistry\\Services\\CompanyTypesServices.cs",
-              "ToolTip": "C:\\Users\\Giovanne\\OneDrive\\\u00C1rea de Trabalho\\SgRentals\\Project\\CompanyRegistry\\CompanyRegistry\\Services\\CompanyTypesServices.cs",
-              "RelativeToolTip": "CompanyRegistry\\Services\\CompanyTypesServices.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAwwBUAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T03:00:38.446Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UserTypesRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Giovanne\\OneDrive\\\u00C1rea de Trabalho\\SgRentals\\Project\\CompanyRegistry\\CompanyRegistry\\Data\\Repositories\\UserTypesRepository.cs",
-              "RelativeDocumentMoniker": "CompanyRegistry\\Data\\Repositories\\UserTypesRepository.cs",
-              "ToolTip": "C:\\Users\\Giovanne\\OneDrive\\\u00C1rea de Trabalho\\SgRentals\\Project\\CompanyRegistry\\CompanyRegistry\\Data\\Repositories\\UserTypesRepository.cs",
-              "RelativeToolTip": "CompanyRegistry\\Data\\Repositories\\UserTypesRepository.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAwwBQAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T02:36:40.321Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UserTypesServices.cs",
-              "DocumentMoniker": "C:\\Users\\Giovanne\\OneDrive\\\u00C1rea de Trabalho\\SgRentals\\Project\\CompanyRegistry\\CompanyRegistry\\Services\\UserTypesServices.cs",
-              "RelativeDocumentMoniker": "CompanyRegistry\\Services\\UserTypesServices.cs",
-              "ToolTip": "C:\\Users\\Giovanne\\OneDrive\\\u00C1rea de Trabalho\\SgRentals\\Project\\CompanyRegistry\\CompanyRegistry\\Services\\UserTypesServices.cs",
-              "RelativeToolTip": "CompanyRegistry\\Services\\UserTypesServices.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAwwBUAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T02:33:08.865Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CompanyTypesController.cs",
-              "DocumentMoniker": "C:\\Users\\Giovanne\\OneDrive\\\u00C1rea de Trabalho\\SgRentals\\Project\\CompanyRegistry\\CompanyRegistry\\Controllers\\CompanyTypesController.cs",
-              "RelativeDocumentMoniker": "CompanyRegistry\\Controllers\\CompanyTypesController.cs",
-              "ToolTip": "C:\\Users\\Giovanne\\OneDrive\\\u00C1rea de Trabalho\\SgRentals\\Project\\CompanyRegistry\\CompanyRegistry\\Controllers\\CompanyTypesController.cs",
-              "RelativeToolTip": "CompanyRegistry\\Controllers\\CompanyTypesController.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAuwCAAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T03:27:57.184Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CompaniesController.cs",
-              "DocumentMoniker": "C:\\Users\\Giovanne\\OneDrive\\\u00C1rea de Trabalho\\SgRentals\\Project\\CompanyRegistry\\CompanyRegistry\\Controllers\\CompaniesController.cs",
-              "RelativeDocumentMoniker": "CompanyRegistry\\Controllers\\CompaniesController.cs",
-              "ToolTip": "C:\\Users\\Giovanne\\OneDrive\\\u00C1rea de Trabalho\\SgRentals\\Project\\CompanyRegistry\\CompanyRegistry\\Controllers\\CompaniesController.cs",
-              "RelativeToolTip": "CompanyRegistry\\Controllers\\CompaniesController.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T02:44:52.225Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "UsersServices.cs",
               "DocumentMoniker": "C:\\Users\\Giovanne\\OneDrive\\\u00C1rea de Trabalho\\SgRentals\\Project\\CompanyRegistry\\CompanyRegistry\\Services\\UsersServices.cs",
               "RelativeDocumentMoniker": "CompanyRegistry\\Services\\UsersServices.cs",
               "ToolTip": "C:\\Users\\Giovanne\\OneDrive\\\u00C1rea de Trabalho\\SgRentals\\Project\\CompanyRegistry\\CompanyRegistry\\Services\\UsersServices.cs",
               "RelativeToolTip": "CompanyRegistry\\Services\\UsersServices.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAwwBsAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAACgAAAAAAAAAAAAAACMAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T01:25:31.209Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-28T16:25:41.132Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UsersRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Giovanne\\OneDrive\\\u00C1rea de Trabalho\\SgRentals\\Project\\CompanyRegistry\\CompanyRegistry\\Data\\Repositories\\UsersRepository.cs",
-              "RelativeDocumentMoniker": "CompanyRegistry\\Data\\Repositories\\UsersRepository.cs",
-              "ToolTip": "C:\\Users\\Giovanne\\OneDrive\\\u00C1rea de Trabalho\\SgRentals\\Project\\CompanyRegistry\\CompanyRegistry\\Data\\Repositories\\UsersRepository.cs",
-              "RelativeToolTip": "CompanyRegistry\\Data\\Repositories\\UsersRepository.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAIwBcAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T01:25:24.409Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Companies.cs",
-              "DocumentMoniker": "C:\\Users\\Giovanne\\OneDrive\\\u00C1rea de Trabalho\\SgRentals\\Project\\CompanyRegistry\\CompanyRegistry\\Models\\Companies.cs",
-              "RelativeDocumentMoniker": "CompanyRegistry\\Models\\Companies.cs",
-              "ToolTip": "C:\\Users\\Giovanne\\OneDrive\\\u00C1rea de Trabalho\\SgRentals\\Project\\CompanyRegistry\\CompanyRegistry\\Models\\Companies.cs",
-              "RelativeToolTip": "CompanyRegistry\\Models\\Companies.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T00:56:41.793Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "UserTypesController.cs",
               "DocumentMoniker": "C:\\Users\\Giovanne\\OneDrive\\\u00C1rea de Trabalho\\SgRentals\\Project\\CompanyRegistry\\CompanyRegistry\\Controllers\\UserTypesController.cs",
               "RelativeDocumentMoniker": "CompanyRegistry\\Controllers\\UserTypesController.cs",
               "ToolTip": "C:\\Users\\Giovanne\\OneDrive\\\u00C1rea de Trabalho\\SgRentals\\Project\\CompanyRegistry\\CompanyRegistry\\Controllers\\UserTypesController.cs",
               "RelativeToolTip": "CompanyRegistry\\Controllers\\UserTypesController.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAkwDcAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBQAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T03:28:36.201Z",
+              "WhenOpened": "2024-10-28T15:52:22.637Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 3,
+              "Title": "CompaniesController.cs",
+              "DocumentMoniker": "C:\\Users\\Giovanne\\OneDrive\\\u00C1rea de Trabalho\\SgRentals\\Project\\CompanyRegistry\\CompanyRegistry\\Controllers\\CompaniesController.cs",
+              "RelativeDocumentMoniker": "CompanyRegistry\\Controllers\\CompaniesController.cs",
+              "ToolTip": "C:\\Users\\Giovanne\\OneDrive\\\u00C1rea de Trabalho\\SgRentals\\Project\\CompanyRegistry\\CompanyRegistry\\Controllers\\CompaniesController.cs",
+              "RelativeToolTip": "CompanyRegistry\\Controllers\\CompaniesController.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T15:52:20.641Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CompanyTypesController.cs",
+              "DocumentMoniker": "C:\\Users\\Giovanne\\OneDrive\\\u00C1rea de Trabalho\\SgRentals\\Project\\CompanyRegistry\\CompanyRegistry\\Controllers\\CompanyTypesController.cs",
+              "RelativeDocumentMoniker": "CompanyRegistry\\Controllers\\CompanyTypesController.cs",
+              "ToolTip": "C:\\Users\\Giovanne\\OneDrive\\\u00C1rea de Trabalho\\SgRentals\\Project\\CompanyRegistry\\CompanyRegistry\\Controllers\\CompanyTypesController.cs",
+              "RelativeToolTip": "CompanyRegistry\\Controllers\\CompanyTypesController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T03:27:57.184Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "UsersController.cs",
               "DocumentMoniker": "C:\\Users\\Giovanne\\OneDrive\\\u00C1rea de Trabalho\\SgRentals\\Project\\CompanyRegistry\\CompanyRegistry\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "CompanyRegistry\\Controllers\\UsersController.cs",
               "ToolTip": "C:\\Users\\Giovanne\\OneDrive\\\u00C1rea de Trabalho\\SgRentals\\Project\\CompanyRegistry\\CompanyRegistry\\Controllers\\UsersController.cs",
               "RelativeToolTip": "CompanyRegistry\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAqwEYAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwDYAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-27T03:27:10.936Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Giovanne\\OneDrive\\\u00C1rea de Trabalho\\SgRentals\\Project\\CompanyRegistry\\CompanyRegistry\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "CompanyRegistry\\Data\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\Giovanne\\OneDrive\\\u00C1rea de Trabalho\\SgRentals\\Project\\CompanyRegistry\\CompanyRegistry\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "CompanyRegistry\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T01:03:12.707Z",
               "EditorCaption": ""
             }
           ]
