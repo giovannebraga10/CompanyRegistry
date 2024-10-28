@@ -5,12 +5,26 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
 using CompanyRegistry.Controllers;
+using CompanyRegistry.Data.Repositories;
+using CompanyRegistry.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddTransient<UsersRepository>();
+builder.Services.AddTransient<UsersServices>();
+builder.Services.AddTransient<UserTypesRepository>();
+builder.Services.AddTransient<UserTypesServices>();
+builder.Services.AddTransient<CompanyTypesRepository>();
+builder.Services.AddTransient<CompanyTypesServices>();
+builder.Services.AddTransient<CompaniesRepository>();
+builder.Services.AddTransient<CompaniesServices>();
+
+builder.Services.AddEntityFrameworkNpgsql().AddDbContext<AppDbContext>(options =>
+{
+    var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+    options.UseNpgsql(connectionString);
+});
 
 builder.Services.AddControllers();
 // Configura��es para Swagger/OpenAPI
@@ -31,6 +45,6 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.MapUsersEndpoints();
+//app.MapUsersEndpoints();
 
 app.Run();

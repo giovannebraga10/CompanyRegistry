@@ -17,15 +17,16 @@ namespace CompanyRegistry.Data.Repositories
             return await _context.UserTypes.ToListAsync();
         }
 
-        public async Task GetByIdAsync(int id)
+        public async Task<UserTypes> GetByIdAsync(int id)
         {
-           await _context.UserTypes.FindAsync(id);
+          return await _context.UserTypes.FindAsync(id);
         }
 
-        public async Task AddAsync(UserTypes userType)
+        public async Task<UserTypes> AddAsync(UserTypes userType)
         {
-            _context.UserTypes.AddAsync(userType);
+            var result = await _context.UserTypes.AddAsync(userType);
             await _context.SaveChangesAsync();
+            return result.Entity;
         }
         
         public async Task UpdateUserType(UserTypes userType)

@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using CompanyRegistry.Data;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.OpenApi;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace CompanyRegistry.Data.Repositories
 {
@@ -25,10 +26,14 @@ namespace CompanyRegistry.Data.Repositories
             return await _context.Companies.FindAsync(id);
         }
 
-        public async Task AddAsync(Companies company)
+        public async Task<Companies> AddAsync(Companies company)
         {
-            await _context.Companies.AddAsync(company);
+            var result = await _context.Companies.AddAsync(company);
             await _context.SaveChangesAsync();
+
+            return result.Entity;
+
+
         }
 
         public async Task UpdateAsync(Companies company)

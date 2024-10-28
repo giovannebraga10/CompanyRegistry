@@ -17,14 +17,14 @@ namespace CompanyRegistry.Services
             await _repository.GetAllAsync();
         }
 
-        public async Task GetCompanyTypeById(int id)
+        public async Task<CompanyTypes> GetCompanyTypeByIdAsync(int id)
         {
-            await _repository.GetByIdAsync(id);
+            return await _repository.GetByIdAsync(id);
         }
 
-        public async Task AddCompanyTypeAsync (CompanyTypes companyType)
+        public async Task<CompanyTypes> AddCompanyTypeAsync (CompanyTypes companyType)
         {
-            await _repository.AddAsync(companyType);
+           return await _repository.AddAsync(companyType);
         }
 
         public async Task DeleteCompanyTypeAsync (int id)

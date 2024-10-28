@@ -236,3 +236,4 @@ C:\Users\Giovanne\OneDrive\Área de Trabalho\SgRentals\Project\CompanyRegistry\C
 C:\Users\Giovanne\OneDrive\Área de Trabalho\SgRentals\Project\CompanyRegistry\CompanyRegistry\obj\Debug\net8.0\CompanyRegistry.genruntimeconfig.cache
 C:\Users\Giovanne\OneDrive\Área de Trabalho\SgRentals\Project\CompanyRegistry\CompanyRegistry\obj\Debug\net8.0\ref\CompanyRegistry.dll
 C:\Users\Giovanne\OneDrive\Área de Trabalho\SgRentals\Project\CompanyRegistry\CompanyRegistry\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\Giovanne\OneDrive\Área de Trabalho\SgRentals\Project\CompanyRegistry\CompanyRegistry\obj\Debug\net8.0\CompanyRegistry.sourcelink.json

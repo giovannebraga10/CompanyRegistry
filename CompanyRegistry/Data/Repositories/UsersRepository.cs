@@ -21,10 +21,11 @@ namespace CompanyRegistry.Data.Repositories
             return await _context.Users.FindAsync(id);
         }
 
-        public async Task AddAsync(Users user)
+        public async Task<Users> AddAsync(Users user)
         {
-            await _context.Users.AddAsync(user);
+            var result = await _context.Users.AddAsync(user);
             await _context.SaveChangesAsync();
+            return result.Entity;
         }
 
         public async Task UpdateAsync (Users user)

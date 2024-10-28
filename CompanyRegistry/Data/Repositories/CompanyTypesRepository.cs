@@ -17,16 +17,17 @@ namespace CompanyRegistry.Data.Repositories
             await _context.CompanyTypes.ToListAsync();
         }
 
-        public async Task GetByIdAsync(int id)
+        public async Task<CompanyTypes> GetByIdAsync(int id)
         {
-            await _context.CompanyTypes.FindAsync(id);
+            return await _context.CompanyTypes.FindAsync(id);
   
         }
 
-        public async Task AddAsync(CompanyTypes companyType)
+        public async Task<CompanyTypes> AddAsync(CompanyTypes companyType)
         {
-            await _context.CompanyTypes.AddAsync(companyType);
+            var result =  await _context.CompanyTypes.AddAsync(companyType);
             await _context.SaveChangesAsync();
+            return result.Entity;
         }
 
         public async Task DeleteAsync(int id)

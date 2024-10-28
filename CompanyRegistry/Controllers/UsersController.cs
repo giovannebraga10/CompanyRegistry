@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CompanyRegistry.Models;
+using CompanyRegistry.Services;
+using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -8,36 +10,71 @@ namespace CompanyRegistry.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
+       private readonly UsersServices _services;
+
+        public UsersController(UsersServices services)
+        {
+            _services = services;
+        }
+
         // GET: api/<UserController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<IActionResult> GetAll()
         {
-            return new string[] { "value1", "value2" };
+            return Ok (await _services.GetAllUsersAsync());
         }
 
         // GET api/<UserController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public async Task<IActionResult> Get(int id)
         {
-            return "value";
+            return Ok (await _services.GetUserByIdAsync(id));
         }
 
         // POST api/<UserController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task<IActionResult> Post(Users user)
         {
+            try
+            {
+                var createdUser = await _services.AddUserAsync(user);
+                return Ok(createdUser);
+            }
+            catch (Exception ex)
+            {
+                return UnprocessableEntity(ex.Message);
+            }
         }
 
         // PUT api/<UserController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public async Task<IActionResult> Put(Users user)
         {
+            try
+            {
+                await _services.AddUserAsync(user);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return UnprocessableEntity(ex.Message);
+            }
         }
 
         // DELETE api/<UserController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
+            try
+            {
+                await _services.DeleteUserById(id);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                return UnprocessableEntity(ex.Message);
+            }
+            
         }
     }
 }

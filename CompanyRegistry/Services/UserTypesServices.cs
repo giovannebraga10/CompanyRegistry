@@ -17,14 +17,14 @@ namespace CompanyRegistry.Services
             await _repository.GetAllAsync();
         }
 
-        public async Task GetUserTypeById(int id)
+        public async Task<UserTypes> GetUserTypeById(int id)
         {
-            await _repository.GetByIdAsync(id);
+           return await _repository.GetByIdAsync(id);
         }
 
-        public async Task AddUserType(UserTypes userType)
+        public async Task<UserTypes> AddUserType(UserTypes userType)
         {
-            await _repository.AddAsync(userType);
+            return await _repository.AddAsync(userType);
         }
 
         public async Task UpdateUserType(UserTypes userType)

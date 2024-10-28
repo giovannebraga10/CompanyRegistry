@@ -13,14 +13,19 @@ namespace CompanyRegistry.Services
             _repository = repository;
         }
 
-        public async Task GetAllUsersAsync()
+        public async Task<IEnumerable<Users>> GetAllUsersAsync()
         {
-            await _repository.GetAllAsync();
+            return await _repository.GetAllAsync();
         }
 
-        public async Task GetUserById(int id)
+        public async Task<Users?> GetUserByIdAsync(int id)
         {
-            await _repository.GetByIdAsync(id);
+            return await _repository.GetByIdAsync(id);
+        }
+
+        public async Task<Users> AddUserAsync(Users user)
+        {
+           return await _repository.AddAsync(user);
         }
 
         public async Task UpdateUserAsync(Users user)
