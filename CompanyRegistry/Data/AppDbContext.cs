@@ -1,5 +1,6 @@
 ﻿using CompanyRegistry.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 
 namespace CompanyRegistry.Data
 {
@@ -14,8 +15,10 @@ namespace CompanyRegistry.Data
         public DbSet<CompanyTypes> CompanyTypes { get; set; }
         public DbSet<UserTypes> UserTypes { get; set; }
 
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
+           // Adicionado Constraint para valor unico na coluna Cnpj, em cenarios que o banco de dados é compartilhado com outras aplicações 
             builder.Entity<Companies>(entity => {
                 entity.HasIndex(e => e.Cnpj).IsUnique();
             });

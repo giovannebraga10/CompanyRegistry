@@ -38,8 +38,7 @@
               "RelativeToolTip": "CompanyRegistry\\Data\\AppDbContext.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAxwBAAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T23:06:25.982Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-28T23:06:25.982Z"
             },
             {
               "$type": "Document",
@@ -49,7 +48,7 @@
               "RelativeDocumentMoniker": "CompanyRegistry\\Data\\Repositories\\UsersRepository.cs",
               "ToolTip": "C:\\Users\\Giovanne\\OneDrive\\\u00C1rea de Trabalho\\SgRentals\\Project\\CompanyRegistry\\CompanyRegistry\\Data\\Repositories\\UsersRepository.cs",
               "RelativeToolTip": "CompanyRegistry\\Data\\Repositories\\UsersRepository.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAwwCwAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-28T22:21:47.313Z",
               "EditorCaption": ""
@@ -62,7 +61,7 @@
               "RelativeDocumentMoniker": "CompanyRegistry\\Services\\UsersServices.cs",
               "ToolTip": "C:\\Users\\Giovanne\\OneDrive\\\u00C1rea de Trabalho\\SgRentals\\Project\\CompanyRegistry\\CompanyRegistry\\Services\\UsersServices.cs",
               "RelativeToolTip": "CompanyRegistry\\Services\\UsersServices.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAmwB4AAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAmwB4AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-28T16:25:41.132Z",
               "EditorCaption": ""
@@ -75,7 +74,7 @@
               "RelativeDocumentMoniker": "CompanyRegistry\\Controllers\\UsersController.cs",
               "ToolTip": "C:\\Users\\Giovanne\\OneDrive\\\u00C1rea de Trabalho\\SgRentals\\Project\\CompanyRegistry\\CompanyRegistry\\Controllers\\UsersController.cs",
               "RelativeToolTip": "CompanyRegistry\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAowC4AAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAkwCsAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-27T03:27:10.936Z",
               "EditorCaption": ""

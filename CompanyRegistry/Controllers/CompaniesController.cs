@@ -81,5 +81,20 @@ namespace CompanyRegistry.Controllers
                 return UnprocessableEntity(ex.Message);
             }
         }
+
+        [HttpDelete("disable/{id}")]
+        public async Task<IActionResult> Disable(int id)
+        {
+            try
+            {
+                await _services.DisableById(id);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return UnprocessableEntity(ex.Message);
+            }
+
+        }
     }
 }

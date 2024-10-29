@@ -36,5 +36,10 @@ namespace CompanyRegistry.Services
         {
             await _repository.DeleteAsync(id);
         }
+        public async Task DisableById(int id)
+        {
+
+            await _repository.UpdateAsync(new Companies { Id = id, Active = false });
+        }
     }
 }

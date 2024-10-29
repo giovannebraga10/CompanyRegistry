@@ -28,7 +28,7 @@ namespace CompanyRegistry.Services
         {
             var userExits = await _repository.UserCpfExist(user.Cpf);
             
-            if (userExits == true)
+            if (userExits)
             {
                 throw new InvalidOperationException("Ja existe um usuario com este Cpf");
             }
@@ -43,6 +43,12 @@ namespace CompanyRegistry.Services
         public async Task DeleteUserById(int id)
         {
             await _repository.DeleteAsync(id);
+        }
+
+        public async Task DisableById(int id)
+        {
+
+            await _repository.UpdateAsync(new Users { Id = id, Active = false });
         }
     }
 }
