@@ -43,5 +43,10 @@ namespace CompanyRegistry.Data.Repositories
                 await _context.SaveChangesAsync();
             }
         }
+
+        public async Task<bool> UserCpfExist(string cpf) 
+        {
+            return await _context.Users.AnyAsync(u  => u.Cpf == cpf);
+        }
     }
 }

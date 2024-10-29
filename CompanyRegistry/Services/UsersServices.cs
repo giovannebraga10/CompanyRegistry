@@ -1,5 +1,6 @@
 ﻿using CompanyRegistry.Data.Repositories;
 using CompanyRegistry.Models;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 
 namespace CompanyRegistry.Services
@@ -25,7 +26,13 @@ namespace CompanyRegistry.Services
 
         public async Task<Users> AddUserAsync(Users user)
         {
-           return await _repository.AddAsync(user);
+            var userExits = await _repository.UserCpfExist(user.Cpf);
+            
+            if (userExits == true)
+            {
+                throw new InvalidOperationException("Ja existe um usuario com este Cpf");
+            }
+            return await _repository.AddAsync(user);
         }
 
         public async Task UpdateUserAsync(Users user)
