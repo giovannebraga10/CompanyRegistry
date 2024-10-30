@@ -35,5 +35,6 @@ namespace CompanyRegistry.Data.Repositories
             var companyType = await _context.CompanyTypes.FindAsync(id);
             _context.CompanyTypes.Remove(companyType);
         }
+
     }
 }

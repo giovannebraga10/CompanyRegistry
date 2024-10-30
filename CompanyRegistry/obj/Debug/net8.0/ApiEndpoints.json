@@ -79,6 +79,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "CompanyRegistry.Controllers.CompaniesController",
+    "Method": "Disable",
+    "RelativePath": "api/Companies/disable/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CompanyRegistry.Controllers.CompanyTypesController",
     "Method": "GetAll",
     "RelativePath": "api/CompanyTypes",
@@ -203,6 +219,22 @@
     "ContainingType": "CompanyRegistry.Controllers.UsersController",
     "Method": "Delete",
     "RelativePath": "api/Users/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CompanyRegistry.Controllers.UsersController",
+    "Method": "Disable",
+    "RelativePath": "api/Users/disable/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,

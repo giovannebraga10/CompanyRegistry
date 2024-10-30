@@ -26,7 +26,7 @@ namespace CompanyRegistry.Services
 
         public async Task<Users> AddUserAsync(Users user)
         {
-            var userExits = await _repository.UserCpfExist(user.Cpf);
+            var userExits = await _repository.UserCpfExists(user.Cpf);
             
             if (userExits)
             {
@@ -45,10 +45,17 @@ namespace CompanyRegistry.Services
             await _repository.DeleteAsync(id);
         }
 
-        public async Task DisableById(int id)
+        public async Task<bool> DisableById(int id)
         {
+            var user = await _repository.GetByIdAsync(id);
+            if (user == null)
+            {
+                return false;
+            }
 
-            await _repository.UpdateAsync(new Users { Id = id, Active = false });
+            user.Active = false;
+            await _repository.UpdateAsync(user);
+            return true;
         }
     }
 }

@@ -32,8 +32,6 @@ namespace CompanyRegistry.Data.Repositories
             await _context.SaveChangesAsync();
 
             return result.Entity;
-
-
         }
 
         public async Task UpdateAsync(Companies company)

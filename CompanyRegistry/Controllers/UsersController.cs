@@ -81,8 +81,13 @@ namespace CompanyRegistry.Controllers
         {
             try
             {
-                await _services.DisableById(id);
-                return Ok();
+                var disabled = await _services.DisableById(id);
+                if (disabled)
+                {
+                    return NoContent();
+                }
+
+                return NotFound();
             }
             catch (Exception ex)
             {
