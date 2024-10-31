@@ -14,9 +14,9 @@ namespace CompanyRegistry.Services
             _repository = repository;
         }
 
-        public async Task<IEnumerable<Users>> GetAllUsersAsync()
+        public async Task<IEnumerable<Users>> GetAllUsersAsync(string ? name, string ? cpf)
         {
-            return await _repository.GetAllAsync();
+            return await _repository.GetAllAsync(name, cpf);
         }
 
         public async Task<Users?> GetUserByIdAsync(int id)

@@ -1,5 +1,6 @@
 ﻿using CompanyRegistry.Models;
 using Microsoft.EntityFrameworkCore;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace CompanyRegistry.Data.Repositories
 {
@@ -11,9 +12,15 @@ namespace CompanyRegistry.Data.Repositories
         {
             _context = context;
         }
-        public async Task<IEnumerable<Users>> GetAllAsync()
+        public async Task<IEnumerable<Users>> GetAllAsync(string? name, string? cpf)
         {
-            return await _context.Users.ToListAsync();
+            var query = _context.Users;
+
+            if (name == null && cpf == null)
+            {
+                return await query.ToListAsync();
+            }
+                return await query.Where(u => EF.Functions.ILike(u.Name, $"%{name}%") || EF.Functions.ILike(u.Cpf, $"%{cpf}%" )).ToListAsync();
         }
 
         public async Task<Users?> GetByIdAsync(int id)

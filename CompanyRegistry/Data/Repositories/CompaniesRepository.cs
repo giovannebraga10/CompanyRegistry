@@ -16,9 +16,15 @@ namespace CompanyRegistry.Data.Repositories
             _context = context;
         }
 
-        public async Task<IEnumerable<Companies>> GetAllAsync()
+        public async Task<IEnumerable<Companies>> GetAllAsync(string? name)
         {
-            return await _context.Companies.ToListAsync();
+            var query = _context.Companies;
+
+            if (name == null) 
+            {
+                return await query.ToListAsync();
+            }
+            return await query.Where(c => EF.Functions.ILike(c.TradeName, $"%{name}%") || EF.Functions.ILike(c.CompanyName, $"%{name}%")).ToListAsync();
         }
 
         public async Task<Companies?> GetByIdAsync(int id)

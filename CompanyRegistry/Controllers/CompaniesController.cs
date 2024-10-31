@@ -22,9 +22,9 @@ namespace CompanyRegistry.Controllers
 
         // GET: api/<CompaniesController>
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll([FromQuery] string? name)
         {
-            return Ok(await _services.GetAllCompaniesAsync());
+            return Ok(await _services.GetAllCompaniesAsync(name));
         }
 
         // GET api/<CompaniesController>/5

@@ -12,9 +12,9 @@ namespace CompanyRegistry.Services
             _repository = repository;
         }
 
-        public async Task<IEnumerable<Companies>> GetAllCompaniesAsync()
+        public async Task<IEnumerable<Companies>> GetAllCompaniesAsync(string? name)
         {
-            return await _repository.GetAllAsync();
+            return await _repository.GetAllAsync(name);
         }
 
         public async Task<Companies?> GetCompanyByIdAsync(int id)

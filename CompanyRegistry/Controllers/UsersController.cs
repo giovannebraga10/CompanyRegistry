@@ -19,9 +19,9 @@ namespace CompanyRegistry.Controllers
 
         // GET: api/<UserController>
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll([FromQuery] string ? name, string? cpf)
         {
-            return Ok (await _services.GetAllUsersAsync());
+            return Ok (await _services.GetAllUsersAsync(name, cpf));
         }
 
         // GET api/<UserController>/5
