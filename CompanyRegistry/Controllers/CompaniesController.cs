@@ -1,4 +1,5 @@
-﻿using CompanyRegistry.Models;
+﻿using CompanyRegistry.DTO;
+using CompanyRegistry.Models;
 using CompanyRegistry.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -53,11 +54,11 @@ namespace CompanyRegistry.Controllers
 
         // PUT api/<CompaniesController>/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(Companies company)
+        public async Task<IActionResult> Put(int id, [FromBody] PutCompany company)
         {
             try
             {
-                await _services.AddCompanyAsync(company);
+                await _services.UpdateCompanyAsync(id, company);
                 return Ok();
             }
             catch (Exception ex)
@@ -100,6 +101,12 @@ namespace CompanyRegistry.Controllers
                 return UnprocessableEntity(ex.Message);
             }
 
+        }
+
+        [HttpGet("types/{typeId}")]
+        public async Task<IActionResult> GetAllByType(int typeId)
+        {
+            return Ok(await _services.GetAllByTypeAsync(typeId));
         }
     }
 }

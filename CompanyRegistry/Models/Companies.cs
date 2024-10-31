@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace CompanyRegistry.Models
 {
@@ -11,7 +12,9 @@ namespace CompanyRegistry.Models
         public string TradeName { get; set; }
         public string CompanyName {  get; set; }
         public string Cnpj { get; set; }
-        public int CompanyType { get; set; }
+        [JsonIgnore]
+        public int CompanyTypeId { get; set; }
+        public virtual CompanyTypes? CompanyType { get; set; } = null!;
         public bool Active { get; set; }
 
 

@@ -4,6 +4,8 @@ using CompanyRegistry.Data;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.OpenApi;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
+using CompanyRegistry.DTO;
+using System.Net;
 
 namespace CompanyRegistry.Data.Repositories
 {
@@ -18,7 +20,7 @@ namespace CompanyRegistry.Data.Repositories
 
         public async Task<IEnumerable<Companies>> GetAllAsync(string? name)
         {
-            var query = _context.Companies;
+            var query = _context.Companies.Include(c => c.CompanyType).Where(c => c.Active == true);
 
             if (name == null) 
             {
@@ -40,10 +42,20 @@ namespace CompanyRegistry.Data.Repositories
             return result.Entity;
         }
 
-        public async Task UpdateAsync(Companies company)
+        public async Task<bool> UpdateAsync(int id, PutCompany company)
         {
-            _context.Companies.Update(company);
-            await _context.SaveChangesAsync();
+            var result = await _context.Companies.FindAsync(id);
+
+            if(result == null)
+            {
+                return false;
+            }
+
+            _context.Entry(result).CurrentValues.SetValues(company);
+
+            var rows = await _context.SaveChangesAsync();
+
+            return Convert.ToBoolean(rows);
         }
 
         public async Task DeleteAsync(int id)
@@ -55,6 +67,11 @@ namespace CompanyRegistry.Data.Repositories
                 _context.Companies.Remove(company);
                 await _context.SaveChangesAsync();
             }
+        }
+
+        public async Task<IEnumerable<Companies>> GetAllByTypeAsync(int type)
+        {
+            return await _context.Companies.Include(c => c.CompanyType).Where(c => c.Active == true && c.CompanyTypeId == type).ToListAsync();
         }
 
     }

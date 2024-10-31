@@ -48,7 +48,7 @@ namespace CompanyRegistry.Controllers
 
         // PUT api/<UserController>/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(Users user)
+        public async Task<IActionResult> Put(int id, [FromBody] Users user)
         {
             try
             {

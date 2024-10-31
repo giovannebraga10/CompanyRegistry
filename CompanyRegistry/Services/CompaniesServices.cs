@@ -1,5 +1,6 @@
 ﻿using CompanyRegistry.Models;
 using CompanyRegistry.Data.Repositories;
+using CompanyRegistry.DTO;
 
 namespace CompanyRegistry.Services
 {
@@ -27,15 +28,16 @@ namespace CompanyRegistry.Services
             return await _repository.AddAsync(company);
         }
 
-        public async Task UpdateCompanyAsync(Companies company)
+        public async Task UpdateCompanyAsync(int id, PutCompany company)
         {
-            await _repository.UpdateAsync(company);
+            await _repository.UpdateAsync(id, company);
         }
 
         public async Task DeleteCompanyAsync(int id)
         {
             await _repository.DeleteAsync(id);
         }
+
         public async Task<bool> DisableById(int id)
         {
             var company = await _repository.GetByIdAsync(id);
@@ -44,10 +46,15 @@ namespace CompanyRegistry.Services
                 return false;
             }
 
-            company.Active = false;
-            await _repository.UpdateAsync(company);
+
+            await _repository.UpdateAsync(id, new PutCompany { Active = false });
 
             return true;
+        }
+
+        public async Task<IEnumerable<Companies>> GetAllByTypeAsync(int type)
+        {
+            return await _repository.GetAllByTypeAsync(type);
         }
     }
 }
