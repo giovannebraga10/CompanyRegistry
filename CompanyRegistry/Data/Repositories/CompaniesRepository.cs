@@ -31,7 +31,7 @@ namespace CompanyRegistry.Data.Repositories
 
         public async Task<Companies?> GetByIdAsync(int id)
         {
-            return await _context.Companies.FindAsync(id);
+            return await _context.Companies.Include(c => c.CompanyType).Where(c => c.Active == true && c.Id == id).SingleOrDefaultAsync();
         }
 
         public async Task<Companies> AddAsync(Companies company)
@@ -42,7 +42,7 @@ namespace CompanyRegistry.Data.Repositories
             return result.Entity;
         }
 
-        public async Task<bool> UpdateAsync(int id, PutCompany company)
+        public async Task<bool> UpdateAsync(int id, UpdateCompanyDTO company)
         {
             var result = await _context.Companies.FindAsync(id);
 

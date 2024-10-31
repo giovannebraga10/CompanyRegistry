@@ -28,9 +28,9 @@ namespace CompanyRegistry.Services
             return await _repository.AddAsync(company);
         }
 
-        public async Task UpdateCompanyAsync(int id, PutCompany company)
+        public async Task<bool> UpdateCompanyAsync(int id, UpdateCompanyDTO company)
         {
-            await _repository.UpdateAsync(id, company);
+            return await _repository.UpdateAsync(id, company);
         }
 
         public async Task DeleteCompanyAsync(int id)
@@ -47,7 +47,7 @@ namespace CompanyRegistry.Services
             }
 
 
-            await _repository.UpdateAsync(id, new PutCompany { Active = false });
+            await _repository.UpdateAsync(id, new UpdateCompanyDTO { Active = false });
 
             return true;
         }

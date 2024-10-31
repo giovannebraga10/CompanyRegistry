@@ -1,6 +1,6 @@
 ﻿namespace CompanyRegistry.DTO
 {
-    public class PutCompany
+    public class UpdateCompanyDTO
     {
         public string? TradeName { get; set; }
         public string? CompanyName { get; set; }
