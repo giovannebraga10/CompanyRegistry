@@ -40,16 +40,7 @@ namespace CompanyRegistry.Services
 
         public async Task<bool> DisableById(int id)
         {
-            var company = await _repository.GetByIdAsync(id);
-            if (company == null)
-            {
-                return false;
-            }
-
-
-            await _repository.UpdateAsync(id, new UpdateCompanyDTO { Active = false });
-
-            return true;
+            return await _repository.DisableAsync(id);
         }
 
         public async Task<IEnumerable<Companies>> GetAllByTypeAsync(int type)

@@ -20,7 +20,7 @@ namespace CompanyRegistry.Data.Repositories
 
         public async Task<IEnumerable<Companies>> GetAllAsync(string? name)
         {
-            var query = _context.Companies.Include(c => c.CompanyType).Where(c => c.Active == true);
+            var query = _context.Companies.Include(c => c.CompanyType).Where(c => c.Active);
 
             if (name == null) 
             {
@@ -31,7 +31,7 @@ namespace CompanyRegistry.Data.Repositories
 
         public async Task<Companies?> GetByIdAsync(int id)
         {
-            return await _context.Companies.Include(c => c.CompanyType).Where(c => c.Active == true && c.Id == id).SingleOrDefaultAsync();
+            return await _context.Companies.Include(c => c.CompanyType).Where(c => c.Active && c.Id == id).SingleOrDefaultAsync();
         }
 
         public async Task<Companies> AddAsync(Companies company)
@@ -71,7 +71,23 @@ namespace CompanyRegistry.Data.Repositories
 
         public async Task<IEnumerable<Companies>> GetAllByTypeAsync(int type)
         {
-            return await _context.Companies.Include(c => c.CompanyType).Where(c => c.Active == true && c.CompanyTypeId == type).ToListAsync();
+            return await _context.Companies.Include(c => c.CompanyType).Where(c => c.Active && c.CompanyTypeId == type).ToListAsync();
+        }
+
+        public async Task<bool> DisableAsync(int id)
+        {
+            var result = await _context.Companies.FindAsync(id);
+
+            if (result == null)
+            {
+                return false;
+            }
+
+            _context.Entry(result).CurrentValues.SetValues(new { Active = false });
+
+            var rows = await _context.SaveChangesAsync();
+
+            return Convert.ToBoolean(rows);
         }
 
     }

@@ -1,4 +1,5 @@
-﻿using CompanyRegistry.Models;
+﻿using CompanyRegistry.DTO;
+using CompanyRegistry.Models;
 using CompanyRegistry.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -19,26 +20,45 @@ namespace CompanyRegistry.Controllers
 
         // GET: api/<UserController>
         [HttpGet]
-        public async Task<IActionResult> GetAll([FromQuery] string ? name, string? cpf)
+        public async Task<IActionResult> GetAll([FromQuery] string? search)
         {
-            return Ok (await _services.GetAllUsersAsync(name, cpf));
+            var users = await _services.GetAllUsersAsync(search);
+
+            return Ok (users.Select(u => u.ToDTO()));
         }
 
         // GET api/<UserController>/5
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
-            return Ok (await _services.GetUserByIdAsync(id));
+            var user = await _services.GetUserByIdAsync(id);
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            return Ok (user.ToDTO());
+        }
+
+        // GET api/<UserController>/types/5
+        [HttpGet("types/{typeId}")]
+        public async Task<IActionResult> GetAllByType(int typeId)
+        {
+            var users = await _services.GetAllByTypeAsync(typeId);
+
+            return Ok(users.Select(u => u.ToDTO()));
         }
 
         // POST api/<UserController>
         [HttpPost]
-        public async Task<IActionResult> Post(Users user)
+        public async Task<IActionResult> Post(CreateUserDTO user)
         {
             try
             {
-                var createdUser = await _services.AddUserAsync(user);
-                return Ok(createdUser);
+                var createdUser = await _services.AddUserAsync(user.ToModel());
+
+                return Ok(createdUser?.ToDTO());
             }
             catch (Exception ex)
             {
@@ -48,12 +68,18 @@ namespace CompanyRegistry.Controllers
 
         // PUT api/<UserController>/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, [FromBody] Users user)
+        public async Task<IActionResult> Put(int id, [FromBody] UpdateUserDTO user)
         {
             try
             {
-                await _services.UpdateUserAsync(user);
-                return Ok();
+                var updated = await _services.UpdateUserAsync(id, user);
+
+                if (!updated)
+                {
+                    return  UnprocessableEntity();
+                }
+
+                return NoContent();
             }
             catch (Exception ex)
             {
@@ -68,6 +94,7 @@ namespace CompanyRegistry.Controllers
             try
             {
                 await _services.DeleteUserById(id);
+
                 return NoContent();
             }
             catch (Exception ex)
@@ -76,12 +103,15 @@ namespace CompanyRegistry.Controllers
             }
             
         }
+
+        // DELETE api/<UserController>/disable/5
         [HttpDelete("disable/{id}")]
         public async Task<IActionResult> Disable(int id)
         {
             try
             {
                 var disabled = await _services.DisableById(id);
+
                 if (disabled)
                 {
                     return NoContent();
@@ -93,7 +123,6 @@ namespace CompanyRegistry.Controllers
             {
                 return UnprocessableEntity(ex.Message);
             }
-
         }
     }
 }

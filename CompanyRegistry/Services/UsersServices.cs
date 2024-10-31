@@ -1,4 +1,5 @@
 ﻿using CompanyRegistry.Data.Repositories;
+using CompanyRegistry.DTO;
 using CompanyRegistry.Models;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 
@@ -14,9 +15,9 @@ namespace CompanyRegistry.Services
             _repository = repository;
         }
 
-        public async Task<IEnumerable<Users>> GetAllUsersAsync(string ? name, string ? cpf)
+        public async Task<IEnumerable<Users>> GetAllUsersAsync(string? search)
         {
-            return await _repository.GetAllAsync(name, cpf);
+            return await _repository.GetAllAsync(search);
         }
 
         public async Task<Users?> GetUserByIdAsync(int id)
@@ -24,7 +25,7 @@ namespace CompanyRegistry.Services
             return await _repository.GetByIdAsync(id);
         }
 
-        public async Task<Users> AddUserAsync(Users user)
+        public async Task<Users?> AddUserAsync(Users user)
         {
             var userExits = await _repository.UserCpfExists(user.Cpf);
             
@@ -32,12 +33,15 @@ namespace CompanyRegistry.Services
             {
                 throw new InvalidOperationException("Ja existe um usuario com este Cpf");
             }
-            return await _repository.AddAsync(user);
+
+            var id = await _repository.AddAsync(user);
+
+            return await _repository.GetByIdAsync(id);
         }
 
-        public async Task UpdateUserAsync(Users user)
+        public async Task<bool> UpdateUserAsync(int id, UpdateUserDTO user)
         {
-            await _repository.UpdateAsync(user);
+            return await _repository.UpdateAsync(id, user);
         }
 
         public async Task DeleteUserById(int id)
@@ -47,15 +51,12 @@ namespace CompanyRegistry.Services
 
         public async Task<bool> DisableById(int id)
         {
-            var user = await _repository.GetByIdAsync(id);
-            if (user == null)
-            {
-                return false;
-            }
+            return await _repository.DisableAsync(id);
+        }
 
-            user.Active = false;
-            await _repository.UpdateAsync(user);
-            return true;
+        public async Task<IEnumerable<Users>> GetAllByTypeAsync(int type)
+        {
+            return await _repository.GetAllByTypeAsync(type);
         }
     }
 }

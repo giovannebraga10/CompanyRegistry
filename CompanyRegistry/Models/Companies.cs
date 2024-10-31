@@ -6,7 +6,6 @@ using System.Text.Json.Serialization;
 
 namespace CompanyRegistry.Models
 {
-    [Table("Companies")]
     public class Companies
     {
         [Key]

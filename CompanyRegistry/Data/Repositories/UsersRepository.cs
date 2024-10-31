@@ -1,6 +1,8 @@
-﻿using CompanyRegistry.Models;
+﻿using CompanyRegistry.DTO;
+using CompanyRegistry.Models;
 using Microsoft.EntityFrameworkCore;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace CompanyRegistry.Data.Repositories
 {
@@ -12,34 +14,45 @@ namespace CompanyRegistry.Data.Repositories
         {
             _context = context;
         }
-        public async Task<IEnumerable<Users>> GetAllAsync(string? name, string? cpf)
+        public async Task<IEnumerable<Users>> GetAllAsync(string? search)
         {
-            var query = _context.Users;
+            var query = _context.Users.Include(u => u.UserType).Include(u => u.Company).ThenInclude(c => c.CompanyType).Where(u => u.Active);
 
-            if (name == null && cpf == null)
+            if (search == null)
             {
                 return await query.ToListAsync();
             }
-                return await query.Where(u => EF.Functions.ILike(u.Name, $"%{name}%") || EF.Functions.ILike(u.Cpf, $"%{cpf}%" )).ToListAsync();
+                return await query.Where(u => EF.Functions.ILike(u.Name, $"%{search}%") || EF.Functions.ILike(u.Cpf, $"%{search}%")).ToListAsync();
         }
 
         public async Task<Users?> GetByIdAsync(int id)
         {
-            return await _context.Users.FindAsync(id);
+            return await _context.Users.Include(u => u.UserType).Include(u => u.Company).ThenInclude(c => c.CompanyType).Where(u => u.Active && u.Id == id).SingleOrDefaultAsync();
         }
 
-        public async Task<Users> AddAsync(Users user)
+        public async Task<int> AddAsync(Users user)
         {
             var result = await _context.Users.AddAsync(user);
             await _context.SaveChangesAsync();
-            return result.Entity;
+            return result.Entity.Id;
         }
 
-        public async Task UpdateAsync (Users user)
+        public async Task<bool> UpdateAsync (int id, UpdateUserDTO user)
         {
-            _context.Users.Update(user);
-            await _context.SaveChangesAsync();
+            var result = await _context.Users.FindAsync(id);
+
+            if (result == null)
+            {
+                return false;
+            }
+
+            _context.Entry(result).CurrentValues.SetValues(user);
+
+            var rows = await _context.SaveChangesAsync();
+
+            return Convert.ToBoolean(rows);
         }
+
         public async Task DeleteAsync(int id)
         {
             var user = await _context.Users.FindAsync(id);
@@ -54,6 +67,27 @@ namespace CompanyRegistry.Data.Repositories
         public async Task<bool> UserCpfExists(string cpf) 
         {
             return await _context.Users.AnyAsync(u  => u.Cpf == cpf);
+        }
+
+        public async Task<IEnumerable<Users>> GetAllByTypeAsync(int type)
+        {
+            return await _context.Users.Include(c => c.UserType).Include(u => u.Company).ThenInclude(c => c.CompanyType).Where(c => c.Active && c.UserTypeId == type).ToListAsync();
+        }
+
+        public async Task<bool> DisableAsync(int id)
+        {
+            var result = await _context.Users.FindAsync(id);
+
+            if (result == null)
+            {
+                return false;
+            }
+
+            _context.Entry(result).CurrentValues.SetValues(new { Active = false });
+
+            var rows = await _context.SaveChangesAsync();
+
+            return Convert.ToBoolean(rows);
         }
     }
 }
