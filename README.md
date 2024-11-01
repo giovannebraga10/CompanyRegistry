@@ -10,7 +10,7 @@ CompanyRegistry é uma API RESTful construída em .NET para o gerenciamento de e
 - [Instalação e Configuração](#instalação-e-configuração)
 
 ## 💻 Tecnologias Utilizadas
-- **Linguagem:** C# (.NET 6)
+- **Linguagem:** C# (.NET 8)
 - **Banco de Dados:** PostgreSQL
 - **ORM:** Entity Framework Core
 - **Arquitetura:** Layered Architecture
@@ -74,6 +74,13 @@ CompanyRegistry é uma API RESTful construída em .NET para o gerenciamento de e
 | `DELETE`  | `/api/usertypes/{id}`          | Exclui um tipo de usuário           |
 
 ## 🚀 Instalação e Configuração
-1. **Clone o repositório:**
-   ```bash
+1. **Postgresql**
+      Certifique-se que há o Postgresql instalado.
+   
+2. **Clone o repositorio**   
    git clone https://github.com/giovannebraga10/CompanyRegistry.git
+
+3. **Inicie o servidor**
+   Inicie o servidor no Visual Studio 2022 ou use `dotnet run`
+   
+
