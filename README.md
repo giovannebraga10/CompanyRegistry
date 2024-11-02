@@ -77,13 +77,13 @@ CompanyRegistry é uma API RESTful construída em .NET para o gerenciamento de e
 1. **Postgresql**
       Certifique-se que há o Postgresql instalado.
    
-2. **Clone o repositorio**   
-   git clone https://github.com/giovannebraga10/CompanyRegistry.git
+3. **Clone o repositorio**   
+      git clone https://github.com/giovannebraga10/CompanyRegistry.git
    
 4. **Configure a Connection String**
-   Abra o arquivo `appsettings.json` e configure a Connection String para apontar ao seu banco de dados PostgreSQL. Atualize as credenciais de acesso (como `Host`, `Database`, `Username`, e `Password`) conforme      necessário para o seu ambiente.
+      Abra o arquivo `appsettings.json` e configure a Connection String para apontar ao seu banco de dados PostgreSQL. Atualize as credenciais de acesso (como `Host`, `Database`, `Username`, e `Password`) conforme o necessário para o seu ambiente.
 
 5. **Inicie o servidor**
-   Inicie o servidor no Visual Studio 2022 ou use `dotnet run`
+      Inicie o servidor no Visual Studio 2022 ou use `dotnet run`
    
 
